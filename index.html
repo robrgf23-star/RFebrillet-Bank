@@ -1,125 +1,160 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RFebrillet Bank</title>
+<header>
+  <!-- Barra superior -->
+  <div class="topbar">
+    <span>Tasa dólar: 59.00 | Euro: 63.50</span>
+    <a href="#">Acceder a TuBanco</a>
+  </div>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/components.css" />
-</head>
-<body>
-  <!-- HEADER -->
-  <header>
-    <div class="topbar">
-      <span>Tasa dólar: 59.00 | Euro: 63.50</span>
-      <a href="#">Acceder a TuBanco</a>
-    </div>
-    <div class="main-header">
-      <a class="brand" href="index.html">RFebrillet Bank</a>
-      <nav id="mainNav" aria-label="Menú principal">
-        <ul class="navlist">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="#productos">Productos</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#canales">Canales Digitales</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-      <button id="btnHamb" aria-controls="mainNav" aria-expanded="false">☰</button>
-    </div>
-  </header>
+  <!-- Menú principal -->
+  <div class="main-header">
+    <a class="brand" href="index.html">RFebrillet Bank</a>
+    <nav class="menu-principal">
+      <ul class="navlist">
+        <li>
+          <a href="#">Inicio</a>
+          <ul class="submenu">
+            <li><a href="#">Noticias</a></li>
+            <li><a href="#">Promociones</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Productos</a>
+          <ul class="submenu">
+            <li><a href="#">Cuentas</a></li>
+            <li><a href="#">Inversiones</a></li>
+            <li><a href="#">Tarjetas</a></li>
+            <li><a href="#">Préstamos</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Servicios</a>
+          <ul class="submenu">
+            <li><a href="#">Banca en Línea</a></li>
+            <li><a href="#">App Móvil</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Canales Digitales</a>
+          <ul class="submenu">
+            <li><a href="#">Cajeros</a></li>
+            <li><a href="#">Subagentes</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Nosotros</a>
+          <ul class="submenu">
+            <li><a href="#">Historia</a></li>
+            <li><a href="#">Misión y Valores</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Contacto</a>
+          <ul class="submenu">
+            <li><a href="#">Oficinas</a></li>
+            <li><a href="#">Soporte</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Bienvenido a RFebrillet Bank</h1>
-      <p>Innovación y confianza para tu futuro financiero.</p>
-      <a href="#productos" class="btn-primary">Abrir Cuenta</a>
-    </div>
-  </section>
+  <!-- Segundo menú (mega menú) -->
+  <nav class="menu-secundario">
+    <ul class="navlist">
+      <li class="mega">
+        <a href="#">Cuentas</a>
+        <div class="mega-menu">
+          <div>
+            <h4>Ahorro</h4>
+            <ul>
+              <li><a href="#">Cuenta de Ahorro en Pesos</a></li>
+              <li><a href="#">Cuenta Ahorro Más</a></li>
+              <li><a href="#">Cuenta Infantil en Pesos</a></li>
+              <li><a href="#">Cuenta Infantil en Dólares</a></li>
+              <li><a href="#">Cuenta en Dólares</a></li>
+              <li><a href="#">Cuenta en Euros</a></li>
+              <li><a href="#">Residentes en el extranjero</a></li>
+              <li><a href="#">Básica Inclusiva</a></li>
+              <li><a href="#">Ahorro Remesas</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Corrientes</h4>
+            <ul>
+              <li><a href="#">Cuenta Corriente Personal</a></li>
+              <li><a href="#">Cuenta Corriente Más</a></li>
+              <li><a href="#">Sin Chequera Transaccional</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Soluciones Digitales</h4>
+            <ul>
+              <li><a href="#">Cuenta MIO Banreservas</a></li>
+              <li><a href="#">Cuenta Digital</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
 
-  <!-- SECCIÓN PRODUCTOS -->
-  <section id="productos" class="catalogo">
-    <h2>Nuestros Productos</h2>
-    <div class="cards">
-      <article class="card">
-        <img src="https://picsum.photos/200/150?random=2" alt="Tarjeta de crédito">
-        <h3>Tarjetas</h3>
-        <p>Opciones de crédito y débito con beneficios exclusivos.</p>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/200/150?random=3" alt="Préstamo">
-        <h3>Préstamos</h3>
-        <p>Financia tus proyectos con tasas competitivas.</p>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/200/150?random=4" alt="Cuenta de Ahorro">
-        <h3>Ahorro</h3>
-        <p>Ahorra de forma segura y accede a tu dinero fácilmente.</p>
-      </article>
-    </div>
-  </section>
+      <li class="mega">
+        <a href="#">Inversiones</a>
+        <div class="mega-menu">
+          <div>
+            <h4>Depósito a Plazo</h4>
+            <ul>
+              <li><a href="#">En Pesos</a></li>
+              <li><a href="#">En dólares y euros</a></li>
+              <li><a href="#">Digital</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Mercado de Valores</h4>
+            <ul>
+              <li><a href="#">Títulos-Valores</a></li>
+              <li><a href="#">Fondos de Inversión</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Soluciones Digitales</h4>
+            <ul>
+              <li><a href="#">Depósito a Plazo Digital</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
 
-  <!-- SECCIÓN SERVICIOS DIGITALES -->
-  <section id="servicios" class="catalogo">
-    <h2>Servicios Digitales</h2>
-    <div class="cards">
-      <article class="card">
-        <img src="https://picsum.photos/200/150?random=5" alt="App Móvil">
-        <h3>App Móvil</h3>
-        <p>Gestiona tus cuentas desde tu smartphone.</p>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/200/150?random=6" alt="Banca en Línea">
-        <h3>Banca en Línea</h3>
-        <p>Realiza transacciones seguras desde cualquier dispositivo.</p>
-      </article>
-    </div>
-  </section>
+      <li class="mega">
+        <a href="#">Tarjetas</a>
+        <div class="mega-menu">
+          <div>
+            <h4>Débito</h4>
+            <ul>
+              <li><a href="#">Mastercard Débito Dólares</a></li>
+              <li><a href="#">Mastercard Débito Gold</a></li>
+              <li><a href="#">Débito Platinum</a></li>
+              <li><a href="#">Débito Standard</a></li>
+              <li><a href="#">Standard Táctil</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Crédito</h4>
+            <ul>
+              <li><a href="#">Visa Ser</a></li>
+              <li><a href="#">Credimás</a></li>
+              <li><a href="#">Mastercard Black</a></li>
+              <li><a href="#">Visa Platinum Universe</a></li>
+              <li><a href="#">Visa y Mastercard Clásica</a></li>
+              <li><a href="#">Gold y Platinum</a></li>
+              <li><a href="#">Preserva</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
 
-  <!-- SECCIÓN INFORMACIÓN CORPORATIVA -->
-  <section id="nosotros" class="catalogo">
-    <h2>Sobre Nosotros</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>Nuestra Historia</h3>
-        <p>RFebrillet Bank nace con el compromiso de ofrecer soluciones financieras accesibles.</p>
-      </article>
-      <article class="card">
-        <h3>Misión y Valores</h3>
-        <p>Brindar confianza, innovación y cercanía a cada cliente.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto" class="catalogo">
-    <h2>Contacto</h2>
-    <p><strong>Teléfono:</strong> (809) 123-4567</p>
-    <p><strong>Email:</strong> info@rfebrilletbank.com</p>
-    <p><strong>Dirección:</strong> Av. Universitaria #123, Santo Domingo</p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-content">
-      <p><strong>Contacto:</strong> Tel: (809) 123-4567 | Email: info@rfebrilletbank.com</p>
-      <p>Dirección: Av. Universitaria #123, Santo Domingo</p>
-      <nav class="footer-links">
-        <a href="#">Términos</a> | <a href="#">Privacidad</a> | <a href="#">Ayuda</a>
-      </nav>
-      <p class="academic-note">Proyecto académico original inspirado en Banreservas</p>
-    </div>
-  </footer>
-
-  <!-- JS -->
-  <script src="js/app.js"></script>
-  <script src="js/mobile-drawer.js"></script>
-</body>
-</html>
+      <li><a href="#">Préstamos</a></li>
+      <li><a href="#">Seguros</a></li>
+      <li><a href="#">Remesas e Impuestos</a></li>
+      <li><a href="#">Atención al Usuario</a></li>
+    </ul>
+  </nav>
+</header>
