@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RFebrillet Bank</title>
+
   <!-- CSS -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
 </head>
 <body>
   <!-- HEADER -->
@@ -21,44 +22,104 @@
       <a class="brand" href="index.html">RFebrillet Bank</a>
       <nav id="mainNav" aria-label="Menú principal">
         <ul class="navlist">
-          <!-- Menú generado con JS desde menu.json -->
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#canales">Canales Digitales</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
-      <button id="btnHamb" aria-controls="mobileDrawer" aria-expanded="false">☰</button>
+      <button id="btnHamb" aria-controls="mainNav" aria-expanded="false">☰</button>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Bienvenido a RFebrillet Bank</h1>
-    <p>Tu aliado financiero para personas, empresas y pymes.</p>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Bienvenido a RFebrillet Bank</h1>
+      <p>Innovación y confianza para tu futuro financiero.</p>
+      <a href="#productos" class="btn-primary">Abrir Cuenta</a>
+    </div>
   </section>
 
-  <!-- MAIN -->
-  <main>
-    <section>
-      <h2>Productos destacados</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Cuentas de Ahorro</h3>
-          <p>Ahorra fácil y accede a tu dinero en cualquier momento.</p>
-        </article>
-        <article class="card">
-          <h3>Préstamos Personales</h3>
-          <p>Haz realidad tus proyectos con tasas accesibles.</p>
-        </article>
-      </div>
-    </section>
-  </main>
+  <!-- SECCIÓN PRODUCTOS -->
+  <section id="productos" class="catalogo">
+    <h2>Nuestros Productos</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="https://picsum.photos/200/150?random=2" alt="Tarjeta de crédito">
+        <h3>Tarjetas</h3>
+        <p>Opciones de crédito y débito con beneficios exclusivos.</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/200/150?random=3" alt="Préstamo">
+        <h3>Préstamos</h3>
+        <p>Financia tus proyectos con tasas competitivas.</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/200/150?random=4" alt="Cuenta de Ahorro">
+        <h3>Ahorro</h3>
+        <p>Ahorra de forma segura y accede a tu dinero fácilmente.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECCIÓN SERVICIOS DIGITALES -->
+  <section id="servicios" class="catalogo">
+    <h2>Servicios Digitales</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="https://picsum.photos/200/150?random=5" alt="App Móvil">
+        <h3>App Móvil</h3>
+        <p>Gestiona tus cuentas desde tu smartphone.</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/200/150?random=6" alt="Banca en Línea">
+        <h3>Banca en Línea</h3>
+        <p>Realiza transacciones seguras desde cualquier dispositivo.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECCIÓN INFORMACIÓN CORPORATIVA -->
+  <section id="nosotros" class="catalogo">
+    <h2>Sobre Nosotros</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Nuestra Historia</h3>
+        <p>RFebrillet Bank nace con el compromiso de ofrecer soluciones financieras accesibles.</p>
+      </article>
+      <article class="card">
+        <h3>Misión y Valores</h3>
+        <p>Brindar confianza, innovación y cercanía a cada cliente.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="catalogo">
+    <h2>Contacto</h2>
+    <p><strong>Teléfono:</strong> (809) 123-4567</p>
+    <p><strong>Email:</strong> info@rfebrilletbank.com</p>
+    <p><strong>Dirección:</strong> Av. Universitaria #123, Santo Domingo</p>
+  </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 RFebrillet Bank - Todos los derechos reservados</p>
+    <div class="footer-content">
+      <p><strong>Contacto:</strong> Tel: (809) 123-4567 | Email: info@rfebrilletbank.com</p>
+      <p>Dirección: Av. Universitaria #123, Santo Domingo</p>
+      <nav class="footer-links">
+        <a href="#">Términos</a> | <a href="#">Privacidad</a> | <a href="#">Ayuda</a>
+      </nav>
+      <p class="academic-note">Proyecto académico original inspirado en Banreservas</p>
+    </div>
   </footer>
 
   <!-- JS -->
   <script src="js/app.js"></script>
-  <script src="js/menu.js"></script>
   <script src="js/mobile-drawer.js"></script>
 </body>
 </html>

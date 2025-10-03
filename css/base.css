@@ -1,5 +1,40 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: var(--font-base); background: var(--color-light); color: var(--color-dark); }
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
+/* ==========================
+   ESTILOS BASE
+========================== */
 
+html {
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--color-dark);
+  background: var(--color-light);
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* Encabezados */
+h1, h2, h3, h4 {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Contenedores */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}

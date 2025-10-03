@@ -1,7 +1,74 @@
-header { background: var(--color-primary); color: white; }
-.topbar { display: flex; justify-content: space-between; padding: 5px 15px; font-size: 0.9em; background: var(--color-secondary); }
-.main-header { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; }
-.brand { font-size: 1.5em; font-weight: bold; }
-nav ul { display: flex; gap: 20px; }
-.hero { text-align: center; padding: 50px 20px; background: white; }
-footer { background: var(--color-dark); color: white; text-align: center; padding: 15px; margin-top: 20px; }
+/* ==========================
+   LAYOUT PRINCIPAL
+========================== */
+
+/* Hero (Portada) */
+.hero {
+  position: relative;
+  background: url("https://picsum.photos/1920/600?random=1") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeIn 2s ease;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+/* Secciones (Productos, Servicios, Nosotros, Contacto) */
+.catalogo {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.catalogo h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Footer */
+footer {
+  background: var(--color-dark);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.footer-links a {
+  color: #ddd;
+  margin: 0 8px;
+}
+
+.footer-links a:hover {
+  color: var(--color-secondary);
+}
+
+.academic-note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
