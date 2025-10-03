@@ -1,13 +1,8 @@
-/* ==========================
-   LAYOUT PRINCIPAL
-========================== */
-
-/* Hero (Portada) */
+/* Hero */
 .hero {
   position: relative;
-  background: url("https://picsum.photos/1920/600?random=1") no-repeat center center/cover;
+  background: url("../assets/images/banner.jpg") no-repeat center center/cover;
   color: #fff;
-  text-align: center;
   height: 600px;
   display: flex;
   align-items: center;
@@ -17,36 +12,30 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.5);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
-  padding: 20px;
-  animation: fadeIn 2s ease;
+  text-align: center;
 }
 
-.hero h1 {
+.hero-content h1 {
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
-.hero p {
+.hero-content p {
   font-size: 1.3rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-/* Secciones (Productos, Servicios, Nosotros, Contacto) */
-.catalogo {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.catalogo h2 {
-  margin-bottom: 30px;
-  font-size: 2rem;
+.btn {
+  padding: 10px 25px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 5px;
 }
 
 /* Footer */
@@ -54,138 +43,14 @@ footer {
   background: var(--color-dark);
   color: white;
   text-align: center;
-  padding: 30px 20px;
-  margin-top: 40px;
+  padding: 20px;
 }
 
 .footer-links a {
   color: #ddd;
-  margin: 0 8px;
+  margin: 0 5px;
 }
 
 .footer-links a:hover {
   color: var(--color-secondary);
-}
-
-.academic-note {
-  margin-top: 15px;
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-/* ==========================
-   MENÚ PRINCIPAL
-========================== */
-.menu-principal {
-  background: var(--color-primary);
-}
-
-.menu-principal .navlist {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-principal .navlist > li {
-  position: relative;
-}
-
-.menu-principal a {
-  display: block;
-  padding: 15px 20px;
-  color: #fff;
-  font-weight: 500;
-}
-
-.menu-principal a:hover {
-  background: var(--color-secondary);
-}
-
-/* Submenús */
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  min-width: 200px;
-  list-style: none;
-  padding: 10px 0;
-  box-shadow: var(--shadow-md);
-  z-index: 100;
-}
-
-.submenu li a {
-  color: var(--color-dark);
-  padding: 10px 15px;
-}
-
-.navlist > li:hover .submenu {
-  display: block;
-}
-
-/* ==========================
-   MENÚ SECUNDARIO (MEGA MENU)
-========================== */
-.menu-secundario {
-  background: var(--color-dark);
-}
-
-.menu-secundario .navlist {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-secundario a {
-  display: block;
-  padding: 15px 20px;
-  color: #fff;
-}
-
-.menu-secundario .mega {
-  position: relative;
-}
-
-.mega-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  color: var(--color-dark);
-  width: 800px;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  box-shadow: var(--shadow-lg);
-  z-index: 200;
-}
-
-.mega-menu h4 {
-  margin-bottom: 10px;
-  color: var(--color-primary);
-}
-
-.mega-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mega-menu li a {
-  display: block;
-  padding: 5px 0;
-  color: var(--color-dark);
-}
-
-.mega:hover .mega-menu {
-  display: grid;
 }

@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RFebrillet Bank</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
 <header>
   <!-- Barra superior -->
   <div class="topbar">
@@ -8,6 +22,7 @@
   <!-- Menú principal -->
   <div class="main-header">
     <a class="brand" href="index.html">RFebrillet Bank</a>
+    <button id="btnHamb" class="hamburger">&#9776;</button>
     <nav class="menu-principal">
       <ul class="navlist">
         <li>
@@ -96,6 +111,7 @@
         </div>
       </li>
 
+      <!-- Repetir para Inversiones, Tarjetas, Préstamos, etc. -->
       <li class="mega">
         <a href="#">Inversiones</a>
         <div class="mega-menu">
@@ -158,3 +174,38 @@
     </ul>
   </nav>
 </header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Bienvenido a RFebrillet Bank</h1>
+    <p>Tu aliado financiero confiable</p>
+    <a href="#" class="btn">Abrir cuenta</a>
+  </div>
+</section>
+
+<!-- Secciones -->
+<section class="catalogo">
+  <h2>Productos y Servicios</h2>
+  <p>Explora nuestras cuentas, tarjetas, préstamos y más.</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 RFebrillet Bank</p>
+  <div class="footer-links">
+    <a href="#">Términos</a> |
+    <a href="#">Privacidad</a> |
+    <a href="#">Ayuda</a>
+  </div>
+  <div class="academic-note">Proyecto académico original inspirado en Banreservas</div>
+</footer>
+
+<!-- JS -->
+<script src="js/menu.js"></script>
+<script src="js/mobile-drawer.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
