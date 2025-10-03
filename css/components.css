@@ -1,93 +1,51 @@
-/* Menú principal */
-.menu-principal {
-  background: var(--color-primary);
-}
+/* ==========================
+   COMPONENTES REUTILIZABLES
+========================== */
 
-.menu-principal .navlist {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.menu-principal a {
-  display: block;
-  padding: 15px 20px;
-  color: white;
-}
-
-.menu-principal a:hover {
+/* Botón principal */
+.btn-primary {
   background: var(--color-secondary);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background 0.3s;
 }
 
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  padding: 10px 0;
-  box-shadow: var(--shadow-md);
+.btn-primary:hover {
+  background: #005a99;
 }
 
-.navlist > li:hover .submenu {
-  display: block;
-}
-
-/* Mega menú */
-.menu-secundario {
-  background: var(--color-dark);
-}
-
-.menu-secundario .navlist {
+/* Cards (para productos, servicios, etc.) */
+.cards {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-.mega-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
+.card {
   background: white;
-  color: var(--color-dark);
-  width: 100%;
-  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 20px;
+  width: 280px;
+  transition: transform 0.3s;
 }
 
-.mega:hover .mega-menu {
-  display: grid;
+.card img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .menu-principal .navlist,
-  .menu-secundario .navlist {
-    flex-direction: column;
-    display: none;
-  }
-  .menu-principal .navlist.show,
-  .menu-secundario .navlist.show {
-    display: flex;
-  }
-  .submenu, .mega-menu {
-    position: static;
-    display: none;
-  }
-  .submenu.show, .mega-menu.show {
-    display: block;
-  }
-  #btnHamb {
-    display: block;
-    background: var(--color-primary);
-    color: white;
-    border: none;
-    font-size: 1.5rem;
-    padding: 10px 15px;
-    cursor: pointer;
-  }
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

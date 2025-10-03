@@ -1,8 +1,13 @@
-/* Hero */
+/* ==========================
+   LAYOUT PRINCIPAL
+========================== */
+
+/* Hero (Portada) */
 .hero {
   position: relative;
-  background: url("../assets/images/banner.jpg") no-repeat center center/cover;
+  background: url("https://picsum.photos/1920/600?random=1") no-repeat center center/cover;
   color: #fff;
+  text-align: center;
   height: 600px;
   display: flex;
   align-items: center;
@@ -12,30 +17,36 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeIn 2s ease;
 }
 
-.hero-content h1 {
+.hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
-.hero-content p {
+.hero p {
   font-size: 1.3rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.btn {
-  padding: 10px 25px;
-  background: var(--color-primary);
-  color: white;
-  border-radius: 5px;
+/* Secciones (Productos, Servicios, Nosotros, Contacto) */
+.catalogo {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.catalogo h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
 }
 
 /* Footer */
@@ -43,14 +54,21 @@ footer {
   background: var(--color-dark);
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
+  margin-top: 40px;
 }
 
 .footer-links a {
   color: #ddd;
-  margin: 0 5px;
+  margin: 0 8px;
 }
 
 .footer-links a:hover {
   color: var(--color-secondary);
+}
+
+.academic-note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #aaa;
 }

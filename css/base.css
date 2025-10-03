@@ -1,20 +1,40 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ==========================
+   ESTILOS BASE
+========================== */
+
+html {
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: var(--color-light);
+  margin: 0;
+  font-family: var(--font-family);
   color: var(--color-dark);
+  background: var(--color-light);
+  line-height: 1.6;
 }
 
+/* Links */
 a {
   text-decoration: none;
+  color: var(--color-primary);
 }
 
-ul {
-  list-style: none;
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* Encabezados */
+h1, h2, h3, h4 {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Contenedores */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }
