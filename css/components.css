@@ -1,51 +1,157 @@
 /* ==========================
-   COMPONENTES REUTILIZABLES
+   COMPONENTES REUTILIZABLES
 ========================== */
 
 /* Botón principal */
 .btn-primary {
-  background: var(--color-secondary);
-  color: white;
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: background 0.3s;
+  background: var(--color-secondary);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background 0.3s;
 }
 
 .btn-primary:hover {
-  background: #005a99;
+  background: #005a99;
 }
 
 /* Cards (para productos, servicios, etc.) */
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  width: 280px;
-  transition: transform 0.3s;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s;
 }
 
 .card img {
-  max-width: 100%;
-  border-radius: 6px;
-  margin-bottom: 15px;
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px);
 }
+
+/* --- MEGA MENU (DESKTOP) --- */
+
+/* Contenedor del Mega Menú */
+.navitem {
+    /* Usaremos la pseudoclase :hover para mostrar el menú en desktop */
+    /* En móvil, la visibilidad se maneja con JS y la clase `.is-open` */
+}
+
+.mega {
+    display: none; /* Ocultar por defecto en escritorio */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: max-content; /* Se ajusta al contenido */
+    max-width: 800px;
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-lg);
+    z-index: 900;
+    text-align: left;
+    min-width: 400px;
+}
+
+.navitem:hover > .mega {
+    display: flex; /* Mostrar al hacer hover en desktop */
+}
+
+/* Columnas dentro del Mega Menú */
+.mega .col {
+    padding: 0 var(--spacing-md);
+    min-width: 180px;
+}
+
+.mega .col:not(:last-child) {
+    border-right: 1px solid #eee;
+}
+
+.mega h4 {
+    color: var(--color-secondary);
+    margin-top: 0;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: var(--spacing-sm);
+}
+
+.mega ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-sm) 0;
+}
+
+.mega ul li a {
+    display: block;
+    padding: var(--spacing-xs) 0;
+    color: var(--color-dark);
+    font-weight: normal;
+    font-size: 0.95rem;
+}
+
+.mega ul li a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* --- MOBILE SUBMENU (ACORDEÓN) --- */
+
+@media (max-width: 992px) {
+    .mega {
+        position: static; /* Ya no es un dropdown absoluto */
+        display: none; /* Ocultar por defecto en móvil */
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        padding: var(--spacing-sm) var(--spacing-md);
+        border-radius: 0;
+        border-top: 1px solid #eee;
+        transition: none; /* Desactivar transiciones de escritorio */
+    }
+    
+    .mega.is-open {
+        display: block; /* Clase para mostrar en móvil (Acordeón) */
+    }
+    
+    .mega .col {
+        padding: var(--spacing-sm) 0;
+        border-right: none;
+    }
+    
+    .mega .col:not(:last-child) {
+        border-bottom: 1px solid #eee;
+    }
+
+    .navitem:hover > .mega {
+        display: none; /* Desactivar hover en móvil */
+    }
+
+    /* Asegurar que el botón del submenú se vea bien */
+    .navlist > li > button {
+        /* Para que la flecha o indicador de expansión se pueda añadir con un pseudo-elemento */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 
 /* Animaciones */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
