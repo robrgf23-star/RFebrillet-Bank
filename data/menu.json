@@ -1,42 +1,52 @@
 [
-  {
-    "id": "personas",
-    "label": "Personas",
-    "columns": [
-      {
-        "title": "Cuentas",
-        "items": [
-          {"label": "Cuenta de Ahorro", "href": "#"},
-          {"label": "Cuenta Digital", "href": "#"}
-        ]
-      },
-      {
-        "title": "Tarjetas",
-        "items": [
-          {"label": "Tarjeta Débito", "href": "#"},
-          {"label": "Tarjeta Crédito", "href": "#"}
-        ]
-      }
-    ]
-  },
-  {
-    "id": "empresas",
-    "label": "Empresas",
-    "columns": [
-      {
-        "title": "Servicios",
-        "items": [
-          {"label": "Cuentas Corrientes", "href": "#"},
-          {"label": "Líneas de Crédito", "href": "#"}
-        ]
-      },
-      {
-        "title": "Banca Internacional",
-        "items": [
-          {"label": "Remesas", "href": "#"},
-          {"label": "Comercio Exterior", "href": "#"}
-        ]
-      }
-    ]
-  }
+    {
+        "id": "personas",
+        "label": "Personas",
+        "columns": [
+            {
+                "title": "Cuentas y Ahorros",
+                "items": [
+                    {"label": "Cuenta Corriente Personal", "href": "#"},
+                    {"label": "Cuenta de Ahorro Digital", "href": "#"},
+                    {"label": "Certificados y Depósitos", "href": "#"}
+                ]
+            },
+            {
+                "title": "Préstamos",
+                "items": [
+                    {"label": "Préstamo Personal", "href": "#"},
+                    {"label": "Préstamo Hipotecario", "href": "#"},
+                    {"label": "Préstamo Vehicular", "href": "#"}
+                ]
+            },
+            {
+                "title": "Tarjetas",
+                "items": [
+                    {"label": "Tarjetas de Crédito", "href": "#"},
+                    {"label": "Tarjetas de Débito", "href": "#"},
+                    {"label": "Servicios Tarjetahabientes", "href": "#"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "empresas",
+        "label": "Empresas",
+        "columns": [
+            {
+                "title": "Financiamiento",
+                "items": [
+                    {"label": "Líneas de Crédito PYME", "href": "#"},
+                    {"label": "Préstamos Comerciales", "href": "#"}
+                ]
+            },
+            {
+                "title": "Banca Digital",
+                "items": [
+                    {"label": "Pago de Nómina", "href": "#"},
+                    {"label": "Banca en Línea Empresarial", "href": "#"}
+                ]
+            }
+        ]
+    }
 ]

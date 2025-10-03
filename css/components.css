@@ -1,157 +1,184 @@
 /* ==========================
-   COMPONENTES REUTILIZABLES
+    COMPONENTES REUTILIZABLES
 ========================== */
 
 /* Botón principal */
 .btn-primary {
-  background: var(--color-secondary);
-  color: white;
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: background 0.3s;
+    display: inline-block;
+    background: var(--color-secondary);
+    color: white;
+    padding: 12px 25px;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+    text-transform: uppercase;
 }
 
 .btn-primary:hover {
-  background: #005a99;
+    background: var(--color-primary);
+    transform: translateY(-2px);
 }
 
 /* Cards (para productos, servicios, etc.) */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  width: 280px;
-  transition: transform 0.3s;
-}
-
-.card img {
-  max-width: 100%;
-  border-radius: 6px;
-  margin-bottom: 15px;
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-md);
+    text-align: left;
+    transition: box-shadow 0.3s, transform 0.3s;
+    border-top: 5px solid var(--color-secondary);
 }
 
 .card:hover {
-  transform: translateY(-8px);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-sm);
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.15rem;
 }
 
 /* --- MEGA MENU (DESKTOP) --- */
 
-/* Contenedor del Mega Menú */
-.navitem {
-    /* Usaremos la pseudoclase :hover para mostrar el menú en desktop */
-    /* En móvil, la visibilidad se maneja con JS y la clase `.is-open` */
-}
-
+/* Ocultar por defecto */
 .mega {
-    display: none; /* Ocultar por defecto en escritorio */
+    display: none; 
     position: absolute;
     top: 100%;
-    left: 0;
-    width: max-content; /* Se ajusta al contenido */
-    max-width: 800px;
+    left: 50%;
+    transform: translateX(-50%); /* Centrar respecto al elemento padre LI */
+    
+    min-width: 600px;
+    max-width: 850px;
     background: white;
     padding: var(--spacing-md);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     box-shadow: var(--shadow-lg);
     z-index: 900;
     text-align: left;
-    min-width: 400px;
+    
+    border-top: 3px solid var(--color-secondary);
+    pointer-events: none; /* No clickable hasta que se muestre */
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
 }
 
+/* Mostrar al hacer hover en el contenedor LI */
 .navitem:hover > .mega {
-    display: flex; /* Mostrar al hacer hover en desktop */
+    display: flex; 
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* Columnas dentro del Mega Menú */
+.mega-cols {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
 .mega .col {
-    padding: 0 var(--spacing-md);
-    min-width: 180px;
+    flex: 1;
+    padding: var(--spacing-sm) 0;
 }
 
-.mega .col:not(:last-child) {
-    border-right: 1px solid #eee;
-}
-
-.mega h4 {
-    color: var(--color-secondary);
+.mega .col h4 {
+    color: var(--color-primary);
+    font-size: 1rem;
     margin-top: 0;
-    border-bottom: 1px solid #f0f0f0;
     padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid #eee;
+    margin-bottom: var(--spacing-sm);
 }
 
-.mega ul {
+.mega .col ul {
     list-style: none;
     padding: 0;
-    margin: var(--spacing-sm) 0;
+    margin: 0;
 }
 
-.mega ul li a {
+.mega .col ul li a {
     display: block;
     padding: var(--spacing-xs) 0;
-    color: var(--color-dark);
     font-weight: normal;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    color: var(--color-dark);
 }
 
-.mega ul li a:hover {
-    color: var(--color-primary);
+.mega .col ul li a:hover {
+    color: var(--color-secondary);
     text-decoration: underline;
 }
 
 /* --- MOBILE SUBMENU (ACORDEÓN) --- */
 
 @media (max-width: 992px) {
+    /* El Mega Menú se convierte en un acordeón */
     .mega {
-        position: static; /* Ya no es un dropdown absoluto */
-        display: none; /* Ocultar por defecto en móvil */
-        width: 100%;
-        max-width: 100%;
+        position: static;
+        transform: none;
         box-shadow: none;
-        padding: var(--spacing-sm) var(--spacing-md);
+        border: none;
         border-radius: 0;
-        border-top: 1px solid #eee;
-        transition: none; /* Desactivar transiciones de escritorio */
+        padding: 0 var(--spacing-md);
+        display: none; /* Oculto por JS */
+        min-width: 100%;
+        max-width: 100%;
+        opacity: 1;
+        pointer-events: auto;
     }
     
+    /* Estado abierto del acordeón (toggleado por JS) */
     .mega.is-open {
-        display: block; /* Clase para mostrar en móvil (Acordeón) */
+        display: block;
+        padding-bottom: var(--spacing-md);
+    }
+    
+    .mega-cols {
+        flex-direction: column;
     }
     
     .mega .col {
+        border-top: 1px solid #f5f5f5;
         padding: var(--spacing-sm) 0;
-        border-right: none;
     }
     
-    .mega .col:not(:last-child) {
-        border-bottom: 1px solid #eee;
-    }
-
-    .navitem:hover > .mega {
-        display: none; /* Desactivar hover en móvil */
-    }
-
-    /* Asegurar que el botón del submenú se vea bien */
+    /* Indicador de expansión para el botón */
     .navlist > li > button {
-        /* Para que la flecha o indicador de expansión se pueda añadir con un pseudo-elemento */
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-}
 
-
-/* Animaciones */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+    .navlist > li > button::after {
+        content: '›'; 
+        font-size: 1.5rem;
+        transform: rotate(90deg);
+        transition: transform 0.3s;
+    }
+    
+    .navlist > li > button[aria-expanded="true"]::after {
+        transform: rotate(-90deg);
+    }
 }

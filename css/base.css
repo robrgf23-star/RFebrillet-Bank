@@ -1,40 +1,56 @@
 /* ==========================
-   ESTILOS BASE
+    ESTILOS BASE
 ========================== */
 
+* {
+    box-sizing: border-box;
+}
+
 html {
-  font-size: var(--font-size-base);
-  scroll-behavior: smooth;
+    font-size: var(--font-size-base);
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: var(--font-family);
-  color: var(--color-dark);
-  background: var(--color-light);
-  line-height: 1.6;
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--color-dark);
+    background: var(--color-light);
+    line-height: 1.6;
 }
 
 /* Links */
 a {
-  text-decoration: none;
-  color: var(--color-primary);
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color 0.3s;
 }
 
 a:hover {
-  color: var(--color-secondary);
+    color: var(--color-secondary);
 }
 
 /* Encabezados */
 h1, h2, h3, h4 {
-  margin: 0 0 var(--spacing-sm) 0;
-  font-weight: 600;
-  color: var(--color-primary);
+    margin: 0 0 var(--spacing-md) 0;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.2;
 }
+
+h1 { font-size: var(--font-size-xxl); }
+h2 { font-size: var(--font-size-xl); }
+h3 { font-size: var(--font-size-lg); }
 
 /* Contenedores */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Utilitario de flexbox */
+.flex {
+    display: flex;
+    align-items: center;
 }

@@ -1,109 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RFebrillet Bank</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>RFebrillet Bank - Innovación y Confianza</title>
 
-    <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/components.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    
+    <!-- Fuente Inter de Google (opcional, pero buena práctica) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-    <div class="topbar">
-      <span>Tasa dólar: 59.00 | Euro: 63.50</span>
-      <a href="#">Acceder a TuBanco</a>
-    </div>
-    <div class="main-header">
-      <a class="brand" href="index.html">RFebrillet Bank</a>
-      <nav id="mainNav" aria-label="Menú principal">
-              </nav>
-      <button id="btnHamb" aria-controls="mainNav" aria-expanded="false">☰</button>
-    </div>
-  </header>
+    <!-- HEADER -->
+    <header>
+        <div class="topbar">
+            <div class="container">
+                <span>Tasa dólar: 59.00 | Euro: 63.50</span>
+                <a href="#" aria-label="Acceder a la plataforma TuBanco">Acceder a TuBanco</a>
+            </div>
+        </div>
+        <div class="container main-header">
+            <a class="brand" href="index.html">RFebrillet Bank</a>
+            
+            <!-- NAV PRINCIPAL: Creada dinámicamente por js/menu.js -->
+            <nav id="mainNav" aria-label="Menú principal"></nav>
+            
+            <button id="btnHamb" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú principal">
+                <span aria-hidden="true">☰</span>
+            </button>
+        </div>
+    </header>
 
-      <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Bienvenido a RFebrillet Bank</h1>
-      <p>Innovación y confianza para tu futuro financiero.</p>
-      <a href="#productos" class="btn-primary">Abrir Cuenta</a>
-    </div>
-  </section>
+    <!-- NUEVA SUB-NAVEGACIÓN HORIZONTAL (Mega Menu 2) -->
+    <nav id="subMenuNav" aria-label="Sub menú de productos y servicios">
+        <div class="container">
+            <!-- ⚠️ El contenido del sub-menú detallado se generará aquí por js/menu.js -->
+        </div>
+    </nav>
 
-    <section id="productos" class="catalogo">
-    <h2>Nuestros Productos</h2>
-    <div class="cards">
-      <article class="card">
-        <img src="https://picsum.photos/200/150?random=2" alt="Tarjeta de crédito">
-        <h3>Tarjetas</h3>
-        <p>Opciones de crédito y débito con beneficios exclusivos.</p>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/200/150?random=3" alt="Préstamo">
-        <h3>Préstamos</h3>
-        <p>Financia tus proyectos con tasas competitivas.</p>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/200/150?random=4" alt="Cuenta de Ahorro">
-        <h3>Ahorro</h3>
-        <p>Ahorra de forma segura y accede a tu dinero fácilmente.</p>
-      </article>
-    </div>
-  </section>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Bienvenido a RFebrillet Bank</h1>
+            <p>La institución financiera que evoluciona contigo. Soluciones modernas, seguras y a tu alcance.</p>
+            <a href="#productos" class="btn-primary">Descubre nuestros productos</a>
+        </div>
+    </section>
 
-    <section id="servicios" class="catalogo">
-    <h2>Servicios Digitales</h2>
-    <div class="cards">
-      <article class="card">
-        <img src="https://picsum.photos/200/150?random=5" alt="App Móvil">
-        <h3>App Móvil</h3>
-        <p>Gestiona tus cuentas desde tu smartphone.</p>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/200/150?random=6" alt="Banca en Línea">
-        <h3>Banca en Línea</h3>
-        <p>Realiza transacciones seguras desde cualquier dispositivo.</p>
-      </article>
-    </div>
-  </section>
+    <!-- SECCIÓN 1: PRODUCTOS DESTACADOS (simulando cards de Banreservas) -->
+    <section id="productos" class="section">
+        <div class="container">
+            <h2>Productos Destacados</h2>
+            <div class="cards-grid">
+                <article class="card">
+                    <img src="https://picsum.photos/300/150?random=2" alt="Tarjeta RFebrillet Black">
+                    <h3>Tarjeta Black</h3>
+                    <p>Accede a beneficios exclusivos, lounges de aeropuerto y acumula millas premium.</p>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/300/150?random=3" alt="Préstamo Hipotecario">
+                    <h3>Tu Préstamo Hogar</h3>
+                    <p>Financia la casa de tus sueños con la tasa más baja y plazos flexibles.</p>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/300/150?random=4" alt="Cuenta de Ahorro">
+                    <h3>Cuenta FlexiAhorro</h3>
+                    <p>Ahorra con intereses competitivos y retira tu dinero sin penalidades.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
-    <section id="nosotros" class="catalogo">
-    <h2>Sobre Nosotros</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>Nuestra Historia</h3>
-        <p>RFebrillet Bank nace con el compromiso de ofrecer soluciones financieras accesibles.</p>
-      </article>
-      <article class="card">
-        <h3>Misión y Valores</h3>
-        <p>Brindar confianza, innovación y cercanía a cada cliente.</p>
-      </article>
-    </div>
-  </section>
+    <!-- SECCIÓN 2: CANALES DIGITALES -->
+    <section id="canales" class="section" style="background: #f7f7f7;">
+        <div class="container">
+            <h2>Canales Digitales</h2>
+            <p>Gestiona tus finanzas donde quiera que estés. Fácil, rápido y seguro.</p>
+            <div class="cards-grid">
+                <article class="card">
+                    <h3>App Móvil</h3>
+                    <p>Transferencias, pagos y consultas al instante desde tu celular.</p>
+                </article>
+                <article class="card">
+                    <h3>Banca en Línea</h3>
+                    <p>La plataforma completa para operaciones empresariales y personales.</p>
+                </article>
+                <article class="card">
+                    <h3>Asistente Virtual (Bot)</h3>
+                    <p>Soporte 24/7 para responder tus preguntas más frecuentes.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
-    <section id="contacto" class="catalogo">
-    <h2>Contacto</h2>
-    <p><strong>Teléfono:</strong> (809) 123-4567</p>
-    <p><strong>Email:</strong> info@rfebrilletbank.com</p>
-    <p><strong>Dirección:</strong> Av. Universitaria #123, Santo Domingo</p>
-  </section>
+    <!-- SECCIÓN 3: NOSOTROS Y CONTACTO (Agrupado) -->
+    <section id="nosotros" class="section">
+        <div class="container">
+            <h2>Nuestra Misión</h2>
+            <p style="max-width: 800px; margin: 0 auto 40px;">Ser el motor de desarrollo financiero del país, ofreciendo productos innovadores y un servicio al cliente excepcional, siempre bajo los pilares de la transparencia y la confianza.</p>
+            
+            <h2 id="contacto">Contáctanos</h2>
+            <p><strong>Teléfono:</strong> (809) 555-RFEB (7332)</p>
+            <p><strong>Email:</strong> info@rfebrilletbank.com</p>
+            <p><strong>Dirección Principal:</strong> Av. La Innovación #2025, Sector Bancario, Santo Domingo, R.D.</p>
+            <a href="#" class="btn-primary" style="margin-top: 20px;">Localizar Sucursales</a>
+        </div>
+    </section>
 
-    <footer>
-    <div class="footer-content">
-      <p><strong>Contacto:</strong> Tel: (809) 123-4567 | Email: info@rfebrilletbank.com</p>
-      <p>Dirección: Av. Universitaria #123, Santo Domingo</p>
-      <nav class="footer-links">
-        <a href="#">Términos</a> | <a href="#">Privacidad</a> | <a href="#">Ayuda</a>
-      </nav>
-      <p class="academic-note">Proyecto académico original inspirado en Banreservas</p>
-    </div>
-  </footer>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <a class="brand" href="index.html" style="color: white; margin-bottom: 10px; display: block;">RFebrillet Bank</a>
+                    <p>Innovación Financiera desde 2025.</p>
+                    <p>RNC: 000-00000-0</p>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h4>Información Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Avisos Legales</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h4>Ayuda y Soporte</h4>
+                    <ul>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                        <li><a href="#">Servicio al Cliente</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RFebrillet Bank. Todos los derechos reservados.</p>
+                <p class="academic-note" style="color: #777;">Proyecto académico - Referencia estructural Banreservas.</p>
+            </div>
+        </div>
+    </footer>
 
-    <script src="js/menu.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/mobile-drawer.js"></script>
+    <!-- JS -->
+    <script src="js/menu.js"></script>
+    <script src="js/mobile-drawer.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
