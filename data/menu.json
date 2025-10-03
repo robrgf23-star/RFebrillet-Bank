@@ -1,0 +1,35 @@
+[
+  {
+    "id": "personas",
+    "label": "Personas",
+    "columns": [
+      {
+        "title": "Cuentas",
+        "items": [
+          {"label": "Cuenta de Ahorro", "href": "#"},
+          {"label": "Cuenta Digital", "href": "#"}
+        ]
+      },
+      {
+        "title": "Tarjetas",
+        "items": [
+          {"label": "Tarjeta Débito", "href": "#"},
+          {"label": "Tarjeta Crédito", "href": "#"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "empresas",
+    "label": "Empresas",
+    "columns": [
+      {
+        "title": "Servicios",
+        "items": [
+          {"label": "Cuentas Corrientes", "href": "#"},
+          {"label": "Líneas de Crédito", "href": "#"}
+        ]
+      }
+    ]
+  }
+]

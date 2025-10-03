@@ -1,0 +1,7 @@
+header { background: var(--color-primary); color: white; }
+.topbar { display: flex; justify-content: space-between; padding: 5px 15px; font-size: 0.9em; background: var(--color-secondary); }
+.main-header { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; }
+.brand { font-size: 1.5em; font-weight: bold; }
+nav ul { display: flex; gap: 20px; }
+.hero { text-align: center; padding: 50px 20px; background: white; }
+footer { background: var(--color-dark); color: white; text-align: center; padding: 15px; margin-top: 20px; }
